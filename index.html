@@ -610,18 +610,27 @@ section { padding: 110px 0; position: relative; scroll-margin-top: 80px; }
     <!-- RIGHT SIDE CONTENT -->
     <div class="about-content reveal">
 
-        <div class="about-text">
-            <h3>A Final-Year Software Engineer In The Making</h3>
+       <div class="about-text">
+    <h3>A Final-Year Software Engineer In The Making</h3>
 
-            <p>
-                I'm a final-year Software Engineering undergraduate with a strong foundation in software development,
-                mobile application development, web technologies, and machine learning.
-            </p>
+    <p>
+        I am D.A. Gimhan Kanishka Gunawardhana, a final-year Software Engineering undergraduate at SLTC Research University with a passion for software development, web technologies, mobile applications, and problem-solving. I have experience in full-stack development, database management, and machine learning fundamentals.
+    </p>
 
-            <p>
-                Beyond the code, I bring strong problem-solving, leadership, teamwork, and organizational skills.
-            </p>
-        </div>
+    <div id="moreText" style="display:none;">
+        <p>
+            Throughout my academic journey, I have worked on various projects, including SafeZone Guardians, a smart transportation and emergency response system. Alongside my technical skills, I have developed strong leadership, teamwork, and communication abilities through university organizations and teaching ICT.
+        </p>
+
+        <p>
+            I am currently seeking internship opportunities to gain industry experience, contribute to impactful projects, and grow as a software engineer while building innovative solutions that address real-world challenges.
+        </p>
+    </div>
+
+    <button id="readMoreBtn" class="btn btn-primary" style="margin-top:10px;">
+        See More
+    </button>
+</div>
 
         <div class="info-card">
           <!-- Education -->
@@ -1011,6 +1020,18 @@ section { padding: 110px 0; position: relative; scroll-margin-top: 80px; }
 <button id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
 
 <script>
+  const readMoreBtn = document.getElementById("readMoreBtn");
+const moreText = document.getElementById("moreText");
+
+readMoreBtn.addEventListener("click", () => {
+    if (moreText.style.display === "none") {
+        moreText.style.display = "block";
+        readMoreBtn.textContent = "See Less";
+    } else {
+        moreText.style.display = "none";
+        readMoreBtn.textContent = "See More";
+    }
+});
 /* ============================================================
    1. NAVBAR — scroll state, mobile menu, active link, smooth scroll
    ============================================================ */
